@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Stopwatch",
+  "description": "An interactive and user-friendly stopwatch to measure and record time intervals with start, stop, lap, and reset functionality.",
+  "requestFramePermissions": []
+}

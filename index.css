@@ -1,0 +1,133 @@
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+#stopwatch-container {
+    background-color: #2c2c2c;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#display {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.control-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #444;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #3e3e3e;
+    color: #f0f0f0;
+    transition: all 0.2s ease-in-out;
+}
+
+.control-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.control-btn:active {
+    transform: translateY(0);
+}
+
+.control-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+#start-stop-btn.start {
+    background-color: #1a4e3a;
+    color: #4caf50;
+    border-color: #2c6b4b;
+}
+
+#start-stop-btn.stop {
+    background-color: #5a2121;
+    color: #f44336;
+    border-color: #8b3b3b;
+}
+
+#laps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+}
+
+#laps-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0.5rem;
+    border-bottom: 1px solid #333;
+    font-size: 1.1rem;
+}
+
+#laps-list li:last-child {
+    border-bottom: none;
+}
+
+#laps-list .lap-label {
+    color: #aaa;
+}
+
+/* For scrollbar */
+#laps-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#laps-list::-webkit-scrollbar-track {
+    background: #2c2c2c;
+}
+
+#laps-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 4px;
+}
+
+#laps-list::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+
+@media (max-width: 480px) {
+    #display {
+        font-size: 3rem;
+    }
+    .control-btn {
+        width: 70px;
+        height: 70px;
+    }
+}

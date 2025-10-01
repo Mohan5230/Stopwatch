@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="stopwatch-container" role="application" aria-label="Stopwatch">
+        <div id="display" role="timer" aria-live="assertive">00:00.00</div>
+        <div id="controls">
+            <button id="lap-reset-btn" class="control-btn" aria-label="Reset stopwatch">Reset</button>
+            <button id="start-stop-btn" class="control-btn start" aria-label="Start stopwatch">Start</button>
+        </div>
+        <ul id="laps-list" aria-label="Lap times"></ul>
+    </div>
+    <script type="module" src="index.tsx"></script>
+</body>
+</html>
